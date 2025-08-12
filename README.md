@@ -32,15 +32,15 @@ Option B: Serve locally (recommended for all browsers)
 ```powershell
 <br>
 
-   python -m http.server 5173
-<br>
+python -m http.server 5173
+
 
 - Open: `http://localhost:5173/`
 - Internet is not required; this just serves files from your machine. You can verify by switching to airplane mode.
 
-<br>
+
 ## How to Play
-<br>
+
 - White moves first. Click a white piece to see blue dots (legal targets), then click a target square to move.
 <br>
 - Promotions: when a pawn reaches the last rank, a dialog appears to choose Queen/Rook/Bishop/Knight.
