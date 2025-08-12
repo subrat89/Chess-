@@ -24,7 +24,9 @@ Option A: Open directly (may work in many browsers)
 <br>
 Option B: Serve locally (recommended for all browsers)
 - Windows PowerShell:
+- <br>
 ```powershell
+<br>
    python -m http.server 5173
 <br>
 
@@ -33,11 +35,17 @@ Option B: Serve locally (recommended for all browsers)
 
 <br>
 ## How to Play
+<br>
 - White moves first. Click a white piece to see blue dots (legal targets), then click a target square to move.
+<br>
 - Promotions: when a pawn reaches the last rank, a dialog appears to choose Queen/Rook/Bishop/Knight.
+<b>
 - Castling: click the king, then click the castling square (g1/c1 or g8/c8) when allowed.
+<br>
 - En passant: available immediately after an opponent’s double-pawn push.
+<br>
 - Undo: take back the last move.
+<br>
 - Flip: change board orientation.
 
 
