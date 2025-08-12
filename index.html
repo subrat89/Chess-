@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Offline Chess</title>
+    <meta name="description" content="Play chess offline with a clean, responsive UI. Click to move, undo, flip board, and enjoy." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand">Offline Chess</div>
+      <div class="header-actions">
+        <button id="newGame" class="btn">New</button>
+        <button id="undo" class="btn ghost">Undo</button>
+        <button id="flip" class="btn ghost">Flip</button>
+        <button id="helpBtn" class="btn ghost">How to play</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="status-bar">
+        <div>Turn: <strong id="turnText">White</strong></div>
+        <div>Status: <strong id="statusText">Ready</strong></div>
+      </section>
+
+      <section class="clock-bar">
+        <div class="clocks">
+          <div class="clock" id="wClock" data-side="w">05:00</div>
+          <div class="clock" id="bClock" data-side="b">05:00</div>
+        </div>
+        <div class="clock-controls">
+          <label class="control">
+            <span>Time</span>
+            <select id="timeControl">
+              <option value="0">No clock</option>
+              <option value="180">3:00</option>
+              <option value="300" selected>5:00</option>
+              <option value="600">10:00</option>
+            </select>
+          </label>
+          <button id="pauseClock" class="btn ghost">Pause</button>
+        </div>
+      </section>
+
+      <section class="board-wrap">
+        <div id="board" class="board" aria-label="Chess board" role="grid"></div>
+        <div class="legend">
+          <div class="legend-row">
+            <span id="a1"></span><span id="b1"></span><span id="c1"></span><span id="d1"></span><span id="e1"></span><span id="f1"></span><span id="g1"></span><span id="h1"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="move-log">
+        <h3>Moves</h3>
+        <ol id="movesList"></ol>
+      </section>
+    </main>
+
+    <dialog id="promoDialog">
+      <h3>Choose promotion</h3>
+      <div class="promo-choices">
+        <button class="promo" data-piece="q">Queen</button>
+        <button class="promo" data-piece="r">Rook</button>
+        <button class="promo" data-piece="b">Bishop</button>
+        <button class="promo" data-piece="n">Knight</button>
+      </div>
+    </dialog>
+
+    <dialog id="helpDialog">
+      <h2>How to play</h2>
+      <p>
+        Tap a piece to see its legal moves, then tap a destination. Legal moves are highlighted.
+        Full rules supported: castling, en passant, and promotions. Use Undo to take back a move,
+        Flip to change orientation, and New to restart. Works fully offline.
+      </p>
+      <div class="dialog-actions"><button id="closeHelp" class="btn">Got it</button></div>
+    </dialog>
+
+    <footer class="app-footer">
+      <span>Clean, responsive chess — no internet required.</span>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+  </body>
+  </html>
+
+
